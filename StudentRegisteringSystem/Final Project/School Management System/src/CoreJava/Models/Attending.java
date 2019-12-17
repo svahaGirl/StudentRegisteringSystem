@@ -4,7 +4,7 @@ public class Attending {
 	
 	public Attending() {} //default constructor
 	
-	// fields
+	// fields available
 	int courseID;
 	String studentEmail;
 	//my constructor
