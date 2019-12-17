@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class AttendingDAO {
 	public AttendingDAO() {} //default constructor
-
+	// fetching attending courses from attending.csv
     public List<Attending> getAttending(){
     	String location = "/Users/Habboubi/eclipse-workspace/Final Project.zip_expanded/Final Project/attending.csv";
 		File file = new File(location);
@@ -35,7 +35,8 @@ public class AttendingDAO {
 			
 		return attendingList;
     }
-
+    
+    //checking if student has course, if not then add student to CSV file
     public void registerStudentToCourse(List<Attending> attending, String studentEmail, int courseID){
     	String cName=""; int found=0;
     	for(int i=0;i<attending.size();i++) {
@@ -65,7 +66,7 @@ public class AttendingDAO {
     	}
     		
     }
-
+    // fetch student current courses
     public List<Course> getStudentCourses(List<Course> courseList, List<Attending> attending, String studentEmail){
     	ArrayList <Course> studentCourses = new ArrayList <Course>();
     	
@@ -85,7 +86,7 @@ public class AttendingDAO {
 
     	return studentCourses;
     }
-
+    //save user course select in CSV file
     public void saveAttending(List<Attending> attending){
     		
     	String location = "/Users/Habboubi/eclipse-workspace/Final Project.zip_expanded/Final Project/attending.csv";
