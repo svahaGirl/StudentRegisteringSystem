@@ -7,7 +7,7 @@ public class Attending {
 	// fields
 	int courseID;
 	String studentEmail;
-	
+	//my constructor
 	public Attending(int courseID,String studentEmail) {
 		this.courseID=courseID;
 		this.studentEmail=studentEmail;
